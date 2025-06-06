@@ -1,0 +1,90 @@
+{
+  "app": {
+    "vendor": "example",
+    "bundleName": "com.example.eduapp",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {
+    "default": {
+      "network": {
+        "cleartextTraffic": true
+      }
+    }
+  },
+  "module": {
+    "mainAbility": ".MainAbility",
+    "deviceType": [
+      "phone",
+      "tablet"
+    ],
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "visible": true,
+        "srcPath": "MainAbility",
+        "name": ".MainAbility",
+        "srcLanguage": "js",
+        "icon": "$media:icon",
+        "description": "$string:MainAbility_desc",
+        "label": "$string:MainAbility_label",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ],
+    "distro": {
+      "moduleType": "entry",
+      "installationFree": false,
+      "deliveryWithInstall": true,
+      "moduleName": "entry"
+    },
+    "package": "com.example.eduapp",
+    "name": ".entry",
+    "js": [
+      {
+        "pages": [
+          "pages/login/login",
+          "pages/tabBars/tabBars",
+          "pages/history/history",
+          "pages/chat/chat",
+          "pages/chartPage/chartPage",
+          "pages/hisChat/hisChat",
+          "pages/self/self",
+          "pages/testpage1/testpage1",
+          "pages/register/register",
+          "pages/testpage2/testpage2",
+          "pages/infochange/infochange",
+          "pages/homework/homework"
+        ],
+        "name": ".MainAbility",
+        "window": {
+          "designWidth": 720,
+          "autoDesignWidth": true
+        }
+      }
+    ],
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      }
+      ,
+      {
+        "name": "ohos.permission.READ_USER_STORAGE"
+      },
+      {
+        "name": "ohos.permission.WRITE_USER_STORAGE"
+      }
+    ]
+  }
+}

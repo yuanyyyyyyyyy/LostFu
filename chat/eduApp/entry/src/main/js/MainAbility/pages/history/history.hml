@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="top">
+        <image src="http://123.249.1.184:888/img/his.png"
+                style="height:40%; width:15%; object-fit: contain;">
+        </image>
+        <text style="font-size: 20px;">
+        历史问答记录
+        </text>
+    </div>
+    <div  class="body">
+        <list  style="height: 100%; width: 100%;">
+            <list-item for="{{(index,item) in message}}" class="listItem">
+                <div class="list-body">
+                    <div style="height: 100%; width: 80%; flex-direction: column;">
+                        <text style="font-size: 20px; height: 60%; margin-left: 3px;">
+                            {{ item.title}}
+                        </text>
+                        <text style="height: 40%;margin-left: 3px;">
+                            {{  item.date}}
+                        </text>
+                    </div>
+                    <div style="height: 100%; width: 20%;">
+                        <image src="http://123.249.1.184:888/img/interact.png" style="height: 80%; width:80%; object-fit: contain;" @click="ToPage({{item.sessionId}})"></image>
+                    </div>
+                </div>
+            </list-item>
+        </list>
+    </div>
+
+</div>

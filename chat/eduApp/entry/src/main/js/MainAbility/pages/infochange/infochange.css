@@ -1,0 +1,145 @@
+.pageview{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.topview{
+    height: 15%;
+    width: 100%;
+/*    border: 1px solid black;*/
+    display: flex;
+    flex-direction: row;
+}
+.text{
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.back{
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+}
+.img2{
+    height: 50%;
+    width: 50%;
+    object-fit: contain;
+}
+.tx1{
+    height: 70%;
+    width: 100%;
+    font-weight: bolder;
+    font-size: 30px;
+/*    border: 1px solid black;*/
+    margin-left: 30px;
+}
+.tx2{
+    height: 30%;
+    width: 100%;
+    color: lightgrey;
+/*    border: 1px solid black;*/
+    margin-left: 30px;
+}
+.imageview{
+/*    border: 1px solid black;*/
+    height: 20%;
+    width: 100%;
+}
+.img{
+    margin-left: 50px;
+    height: 100%;
+    width: 40%;
+    object-fit: contain;
+}
+.img1{
+/*    margin-left: 50px;*/
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.bottomview{
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.radio-div{
+    height: 10%;
+    width: 100%;
+/*    border: 1px solid black;*/
+    display: flex;
+    flex-direction: row;
+}
+.radio{
+    height: 100%;
+    width: 40%;
+}
+.tx3{
+    font-size: 40px;
+    font-weight: bolder;
+}
+.inforview{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.items{
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+/*    border: 1px solid black;*/
+}
+.tx4{
+    height: 40%;
+    width: 100%;
+    font-size: 20px;
+    color: lightsteelblue;
+    font-weight: bolder;
+}
+
+.button{
+    height: 20%;
+    width: 100%;
+}
+.bt{
+    height: 50%;
+    width: 100%;
+}
+.dialog{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.dia{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.list{
+    height: 85%;
+    width: 100%;
+}
+.btn{
+    height: 10%;
+    width: 100%;
+}
+.listitem{
+    margin-bottom: 3%;
+    height: 40%;
+    width: 100%;
+}
+.div{
+    height: 100%;
+    width: 100%;
+}
+.imageview1{
+    height: 100%;
+    width: 80%;
+}

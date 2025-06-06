@@ -1,0 +1,86 @@
+.container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.body{
+    width: 100%;
+    height: 50%;
+
+}
+.form{
+    width: 100%;
+    height: 50%;
+    flex-direction: column;
+    border-bottom: 1px #ffeeeeee;
+}
+.form1{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form_input{
+    height: 10%;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 3%;
+}
+
+.label{
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_text{
+    width: 70%;
+    border-radius: 0px;
+
+}
+.register{
+    width: 100%;
+    height: 10%;
+    margin-top: 3%;
+    align-items: center;
+}
+.form_button{
+    width: 100%;
+    height: 30%;
+
+    justify-content: center;
+    align-items: center;
+}
+.my-button{
+    width: 90%;
+    height: 50%;
+    background-color: #ff0090ff;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+
+.middle{
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+}
+.img{
+    height: 25%;
+    width: 33%;
+    object-fit: contain;
+
+}
+.bottom
+{
+    width: 100%;
+    height: 20%;
+    flex-direction: column;
+}

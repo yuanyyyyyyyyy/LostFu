@@ -1,0 +1,40 @@
+.container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    width: 100%;
+    height: 80px;
+    font-size: 26px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chart-region {
+
+    height: 300px;
+    width: 700px;
+    background-color: #ff51c5d4;
+}
+.line{
+    background-color: #ff78c3b8;
+    height: 300px;
+    width: 700px;
+}
+.chart-background {
+    object-fit: fill;
+}
+.chart-data {
+    width: 700px;
+    height: 600px;
+    display: flex;
+    margin-left: 40px;
+}
+/* 量规图的颜色*/
+.data-gauge {
+    colors: #83f115, #fd3636, #3bf8ff;
+    weights: 4, 2, 1;
+}

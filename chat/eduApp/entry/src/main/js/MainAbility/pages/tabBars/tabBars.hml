@@ -1,0 +1,43 @@
+<element name="chat" src="../chat/chat.hml"></element>
+<element name="self" src="../self/self.hml"></element>
+<element name="convert" src="../testpage1/testpage1.hml"></element>
+<element name="home" src="../homework/homework.hml"></element>
+<div class="container">
+    <div style="height: 90%; width: 100%; ">
+        <swiper indicatordisabled="true" indicator="false" style="width: 100%;height: 100%;" id="swiper" @change="swiperChange()">
+            <div class="swiperView">
+                <chat></chat>
+            </div>
+            <div class="swiperView">
+                <div class="tx">
+                 <home></home>
+                </div>
+
+            </div>
+            <div class="swiperView">
+               <convert></convert>
+            </div>
+            <div class="swiperView">
+                <self></self>
+            </div>
+        </swiper>
+    </div>
+    <div class="bottom">
+        <div for="{{(i,v) in tabList}}" @click="NavigateToPage(i)" style="width: 25%; height: 100%; flex-direction: column;" >
+            <div class="label1" >
+                <image if="{{v.selected}}" src="{{v.IMG}}" style="height: 70%;width:70%; object-fit: contain;" >
+                </image>
+                <image else  src="{{v.img}}" style="height: 70%;width:70%; object-fit: contain;"  >
+                </image>
+            </div>
+            <div class="label">
+                <text class="sl" if="{{v.selected}}" >
+                    {{v.name}}
+                </text>
+                <text class="lx" else >
+                    {{v.name}}
+                </text>
+            </div>
+        </div>
+    </div>
+</div>

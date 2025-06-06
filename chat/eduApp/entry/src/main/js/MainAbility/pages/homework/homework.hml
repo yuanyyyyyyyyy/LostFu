@@ -1,0 +1,50 @@
+<div class="pageView">
+    <div class="topView">
+        <image src="/common/static/homeworkIcon.png" style="width: 15%;height: 60%;object-fit: contain;"></image>
+        <text class="textView">作业助手</text>
+    </div>
+    <div class="bottomView">
+        <div class="buttonView1" @click="clickDia1()">
+            <div class="imgView">
+                <image src="{{photoWay[0].iconSrc}}" class="iconView"></image>
+            </div>
+            <div class="textAreaView">
+                <text class="text1View">{{photoWay[0].name}}</text>
+            </div>
+        </div>
+        <div class="buttonView2" @click="clickDia2()">
+            <div class="imgView1">
+                <image src="{{photoWay[1].iconSrc}}" class="iconView1"></image>
+            </div>
+            <div class="textAreaView1">
+                <text class="text1View">{{photoWay[1].name}}</text>
+            </div>
+        </div>
+    </div>
+    <div class="scrollView">
+        <list style=" width: 100%; flex-direction: column; height: 100%;"   >
+            <list-item style="width: 100%; height: 100%;">
+                <div style="width: 100%; height: 100%;">
+                <div style="width: 100%; height: 100%;" if="{{!funid}}">
+                    <image src="{{backUrl}}" style="object-fit: contain;height: 100%;width: 100%;"></image>
+                </div>
+                <div style="width: 100%; height: 100%;" if="{{funid}}">
+                    <text style="width: 100%;height: 100%;font-size: 15px;">{{result}}</text>
+                </div>
+                </div>
+            </list-item>
+        </list>
+    </div>
+
+    <dialog id="dia1" class="diaview">
+        <div style="height: 100%; width: 100%; align-items: center; flex-direction: column;">
+            <div for="(i, v) in imageData" class="point">
+                <image style="align-items: center; width: 75%; height: 100%;" src="{{v.src}}"></image>
+                <input type="radio" style="width: 20%; height: 30%;" checked="{{v.checked}}" onClick="handRadioClick({{i}})" name="radio"></input>
+            </div>
+            <div style="margin-top: 20px;width: 40%; height: 5%;" onClick="handleSubmit" ><text style="height: 100%;width: 100%; text-align: center; font-size: 15px;">确认图片</text></div>
+        </div>
+    </dialog>
+
+
+</div>

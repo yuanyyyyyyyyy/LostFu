@@ -1,0 +1,64 @@
+<div class="pageview">
+<div class="topview">
+<text class="title">文档转换</text>
+</div>
+<div class="midview">
+    <div class="m1view">
+<!--        <text class="tx">word转换</text>-->
+        <div class="jpg">
+            <div class="imageview1">
+                <image src="common/static/wordtopdf.png" onclick="wordtpdf" class="img"></image>
+            </div>
+            <div class="imageview1">
+                <image src="common/static/PDFToWord.png" onclick="pdftword" class="img"></image>
+            </div>
+        </div>
+   <div class="d1view">
+       <div class="text">
+           <text class="tx">WORD转PDF</text>
+       </div>
+       <div class="text">
+           <text class="tx">PDF转WORD</text>
+       </div>
+
+   </div>
+    </div>
+    <div class="m1view">
+<!--        <text class="tx">图片格式转换</text>-->
+        <div class="jpg">
+            <div class="imageview1">
+                <image src="common/static/JPG tWord (1).png" class="img" onclick="imagetword"></image>
+            </div>
+            <div class="imageview1">
+                <image src="common/static/JPGtPDF (2).png" class="img" onclick="imagetpdf"></image>
+            </div>
+        </div>
+        <div class="d1view">
+            <div class="text">
+                <text class="tx">图片转WORD</text>
+            </div>
+            <div class="text">
+                <text class="tx">图片转PDF</text>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <div class="midview1">
+        <div class="dt">
+            <text class="dtt">最近打开文档</text>
+        </div>
+        <list  class="list">
+            <list-item class="item" for="{{list}}">
+                <div class="ditem">
+                    <text>{{$item}}</text>
+                </div>
+            </list-item>
+        </list>
+    </div>
+<div class="bottomview">
+    <div class="imageview">
+        <image class="img" src="common/static/upload.png" onclick="clickroot"></image>
+    </div>
+</div> 
+</div>

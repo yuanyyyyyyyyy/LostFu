@@ -1,0 +1,21 @@
+
+<div class="container">
+    <div>
+        <text class="title" >人口分布图</text>
+    </div>
+    <stack class="chart-region line">
+        <chart class="chart-data" type="line" ref="linechart" options="{{lineOps}}" datasets="{{lineData}}"></chart>
+    </stack>
+    <div>
+        <text class="title" >柱状图</text>
+    </div>
+    <stack class="chart-region">
+        <chart class="data-bar" type="bar" id="bar-chart" options="{{barOps}}" datasets="{{barData}}"></chart>
+    </stack>
+    <div>
+        <text class="title" >量规图</text>
+    </div>
+    <stack class="chart-region">
+        <chart class="data-gauge" style="margin-left: 30px; margin-top: 20px;"  type="gauge" percent = "50"></chart>
+    </stack>
+</div>

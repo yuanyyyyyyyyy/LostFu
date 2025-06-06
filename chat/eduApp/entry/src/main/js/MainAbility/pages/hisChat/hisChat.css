@@ -1,0 +1,80 @@
+/* index.css */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.message-list {
+    flex: 1;
+    padding: 10px;
+    background-color: #f2f3f5;
+    overflow-y: auto; /* 添加滚动条 */
+}
+
+.message-container {
+    display: flex;
+    align-items: flex-end; /* 使头像和文本对齐到底部 */
+    margin-top: 20px;
+    flex-direction: column;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.self-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+
+
+}
+
+
+.self-message {
+    background-color: #98e165;
+    color: #ffffff;
+    align-self: flex-end;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 10px;
+    word-break: break-all; /* 允许单词内断行 */
+    margin-bottom: 5px;
+}
+
+.other-message  {
+    background-color: #ffffff;
+    color: #000000;
+    align-self: flex-start;
+    margin-right: auto;
+    padding: 10px;
+    border-radius: 10px;
+    word-break: break-all; /* 允许单词内断行 */
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.message-input {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.send-button {
+    background-color: #1aad19;
+    color: #ffffff;
+}

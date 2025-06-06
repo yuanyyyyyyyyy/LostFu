@@ -1,0 +1,65 @@
+<div class="container">
+
+        <div class="form" >
+                                      <!--账号，密码登录样式-->
+            <div class="form1" if="{{UsePwd}}">
+                <div style="height: 30%;"></div>
+                <div class="form_input">
+                    <text class="label">账号</text>
+                    <input class="input_text" type='text' placeholder="请输入账号" onchange="userInput()"></input>
+                </div>
+                <div class="form_input">
+                    <text class="label">密码</text>
+                    <input class="input_text" type='password' placeholder="请输入密码" onchange="pwdInput()"></input>
+                </div>
+            </div>
+
+                                     <!-- 邮箱验证码登录-->
+            <div class="form1" else>
+                <div class="form_input">
+                    <text class="label">邮箱</text>
+                    <input class="input_text" type='text' placeholder="请输入账号" onchange="emailInput()"></input>
+                </div>
+                <div class="form_input">
+                    <div style="width: 5%;"></div>
+                    <input class="input_text" type='password' placeholder="请输入验证码" onchange="CodeInput()"></input>
+<!--                    <text class="label" @click="GetCode()">获取验证码</text>-->
+                    <button style="font-size: 10px;" type="text" onclick="GetCode()">获取验证码</button>
+                </div>
+            </div>
+
+        </div>
+
+                                    <!-- 第三方登录-->
+        <div class="middle">
+                    <div style="height: 30%; width: 100%; justify-content: center; align-items: center; ">
+                        <text style="font-size:30px;">
+                            or
+                        </text>
+                    </div>
+            <div style="height: 60%; width: 100%; justify-content: center; ">
+                <image src="/common/static/QQ.png" class="img"></image>
+                <image src="/common/static/mail.png" class="img" onclick="ToMail()"></image>
+                <image src="/common/static/wechat.png" class="img"></image>
+            </div>
+            <div style="height: 10%; width: 100%;">
+                <text style="height: 100%;width: 80%; font-size: 15px; text-align: right;">
+                    还未拥有账号？
+                </text>
+                <text style="width: 20%; height: 100%; color: blue; font-size: 15px;" @click="ToRegister()">
+                    注册
+                </text>
+            </div>
+        </div>
+                                    <!--   按钮区     -->
+            <div class="bottom">
+                <div style="height: 80%; width: 100%; align-items: center; justify-content: center;">
+                    <div class="my-button"  onclick="Login()" >
+                        <text>
+                            登录
+                        </text>
+                    </div>
+                </div>
+            </div>
+
+</div>

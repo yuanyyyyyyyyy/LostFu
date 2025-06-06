@@ -1,0 +1,159 @@
+.pageview{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.topview{
+    height: 10%;
+    width: 100%;
+/*    border: 3px solid black;*/
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+}
+.title{
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 楷体;
+}
+.tx{
+/*    display: flex;*/
+/*    flex-direction: column;*/
+    height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 楷体;
+/*    justify-content:space-around;*/
+
+
+}
+.midview{
+    height: 40%;
+    width: 100%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+.bottomview{
+    height: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+.m1view{
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+/*    border: 1px solid black;*/
+    justify-content: center;
+    align-items: center;
+
+}
+
+.d1view{
+    height: 30%;
+    width: 80%;
+/*    border: 2px solid black;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50;
+
+}
+.bt{
+   width: 80%;
+    height: 50%;
+    background-color: red;
+}
+.bt0{
+    width: 80%;
+    height: 50%;
+    background-color: cornflowerblue;
+}
+.bt1{
+    width: 50%;
+    height: 50%;
+    background-color: orange;
+}
+.bt2{
+    width: 50%;
+    height: 50%;
+    background-color: indianred;
+}
+.bt3{
+    width: 30%;
+    height: 50%;
+    background-color: olivedrab;
+}
+.imageview{
+    height: 80%;
+    width: 20%;
+}
+.imageview1{
+    height: 100%;
+    width: 50%;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.jpg{
+    height: 70%;
+    width: 100%;
+}
+.imageview2 {
+    height: 80%;
+    width: 50%;
+}
+.midview1{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.text{
+    width: 40%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.list{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    height: 25%;
+    width: 50%;
+/*    border: 1px solid black;*/
+    justify-content: center;
+    align-items: center;
+}
+.ditem{
+    height: 80%;
+    width: 70%;
+    border: 1px solid black;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.dt{
+    height: 10%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.dtt{
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+}

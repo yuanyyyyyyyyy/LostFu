@@ -1,0 +1,39 @@
+<div class="pageView">
+    <div class="headView">
+        <div class="topView">
+            <div class="backView">
+                <image class="backImg" src="/common/static/back.png" @click="ToLogin"></image>
+            </div>
+            <div class="textView">
+                <text class="text">注册</text>
+            </div>
+        </div>
+    </div>
+    <div class="bottomView">
+        <div class="itemView">
+            <div class="welcome">
+                <div style="height: 60%;"><text style="color: mediumblue;font-size: 22px;width: 50%;height: 100%;font-weight: bolder; margin-top: 40%; margin-left: 10%;">欢迎</text></div>
+                <div style="height: 40%;"><text style="font-size: 16px;width: 70%;height: 100%;margin-bottom: 40%;margin-left: 10%; color: black;">注册以继续操作</text></div>
+            </div>
+            <div class="inputView">
+                <div class="intro"><text class="introText">用户名</text></div>
+                <div class="input"><input onchange="userInput" placeholder="anla" style="text-align: center; height: 95%;border-radius: 0px;background-color: #ffffffff;"></input></div>
+            </div>
+            <div class="inputView">
+                <div class="intro"><text class="introText">邮箱</text></div>
+                <div class="input"><input onchange="emailInput"  placeholder="123456789@qq.com" style="text-align: center;height: 95%;border-radius: 0px; background-color: white;"></input></div>
+            </div>
+            <div class="inputView">
+                <div class="intro"><text class="introText">密码</text></div>
+                <div class="input"><input onchange="pwdInput"  placeholder="********" style="text-align: center;height: 95%;border-radius: 0px;background-color: white;" type="password"></input></div>
+            </div>
+            <div class="inputView">
+                <div class="intro"><text class="introText">确认密码</text></div>
+                <div class="input"><input onchange="checkPwdInput"  placeholder="********" style="text-align: center;height: 95%;border-radius: 0px;background-color: white;" type="password"></input></div>
+            </div>
+            <div style="height: 12%;justify-content: center;width: 100%;">
+            <button class="button" @click="register">确认</button>
+            </div>
+        </div>
+    </div>
+</div>

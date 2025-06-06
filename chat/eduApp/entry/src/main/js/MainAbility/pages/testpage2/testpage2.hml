@@ -1,0 +1,31 @@
+<div class="pageview">
+<div class="topview">
+    <div class="imageview">
+        <image class="img" src="common/static/filedown.png"></image>
+    </div>
+    <div class="file">
+        <text class="tx">文档列表</text>
+    </div>
+</div>
+<div class="bottomview">
+    <list class="list" scrollpage="true">
+        <list-item for="{{list}}" class="item">
+            <div class="listitem">
+                <div class="check" > <input class="checkbox" name="radio" type="radio" checked="{{$item.check}}" onclick="checkbox({{$idx}})"></input></div>
+                <div class="text">
+                    <text class="tx3">{{$item.name}}</text>
+                </div>
+            </div>
+        </list-item>
+    </list>
+</div>
+    <div class="midview">
+        <div class="imageview1">
+            <image class="img" src="common/static/tochange.png" onclick="backpage"></image>
+        </div>
+<!--        <div class="change">-->
+<!--            <text class="tx2" onclick="backpage">去转换</text>-->
+<!--        </div>-->
+
+    </div>
+</div>

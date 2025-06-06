@@ -1,0 +1,23 @@
+<div class="pageView">
+    <div class="topView">
+    <div class="selfView">
+        <div class="imgView">
+            <image class="cimg" src="{{selfInfo.headImg}}"></image>
+        </div>
+        <div class="introView">
+            <text class="nameView">{{selfInfo.name}}</text>
+<!--            <text class="idView">{{selfInfo.infoId}}</text>-->
+        </div>
+    </div>
+        <div class="progressView">
+           <text class="progressText">88%</text>
+        <progress class="progress" type="horizontal" percent= "88"></progress>
+        </div>
+    </div>
+    <div class="funcView">
+        <div class="itemView" for="(i,v) in funcInfo" @click="route({{v.toPage}})">
+                <div class="funcImg"> <image class="fImg" src="{{v.fImg}}"></image></div>
+                <div class="funcName"> <text class="fText">{{v.fName}}</text></div>
+        </div>
+    </div>
+</div>

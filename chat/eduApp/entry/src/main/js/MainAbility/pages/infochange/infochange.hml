@@ -1,0 +1,68 @@
+<div class="pageview">
+    <div class="topview">
+        <div class="text">
+            <text class="tx1">修改信息</text>
+            <text class="tx2" >让更多朋友了解你</text>
+        </div>
+        <div class="back">
+            <image src="common/static/back.png"  @click="toPage()"class="img2"></image>
+        </div>
+    </div>
+    <div class="imageview">
+        <image class="img" src="common/static/camera.png" onclick="imageclick"></image>
+    </div>
+    <dialog id="log" class="dialog" >
+        <div class="dia">
+            <list class="list">
+                <list-item for="{{img}}" class="listitem">
+                    <div class="div">
+                        <div class="imageview1">
+                            <image src="{{$item.src}}" class="img1"></image>
+                        </div>
+                        <div class="input">
+                            <input type="radio" name="radio" checked="{{$item.check}}" onclick="imgg({{$idx}})"></input>
+                        </div>
+                    </div>
+                </list-item>
+            </list>
+            <button onclick="bt" value="确定" class="btn"></button>
+        </div>
+
+    </dialog>
+    <div class="bottomview">
+        <div class="radio-div">
+            <div class="radio">
+                <input class="radio" type="radio" checked='false' name="radioSample" disabled="false" value=""></input>
+                <text class="tx3">女生</text>
+            </div>
+            <div class="radio">
+                <input class="radio" type="radio" checked='false' name="radioSample" disabled="false"></input>
+                <text class="tx3">男生</text>
+            </div>
+        </div>
+        <div class="inforview">
+        <!-- 昵称输入框 -->
+            <div class="items">
+                <text class="tx4">昵称</text>
+                <input placeholder="请输入昵称" value="{{username}}" onchange="namechange" style="background-color: white; placeholder-color: rgba(0,0,0,0.5);" type="text"></input>
+            </div>
+
+        <!-- 电话输入框 -->
+            <div class="items">
+                <text class="tx4">电话</text>
+                <input placeholder="请输入电话" value="{{phone}}" onchange="phonechange" style="background-color: white; placeholder-color: rgba(0,0,0,0.5);" type="text"></input>
+            </div>
+
+        <!-- 邮箱输入框 -->
+            <div class="items">
+                <text class="tx4">邮箱</text>
+                <input placeholder="请输入邮箱" value="{{email}}" onchange="emailchange" style="background-color: white; placeholder-color: rgba(0,0,0,0.5);" type="text"></input>
+            </div>
+        </div>
+
+
+        <div class="button" onclick="infosave">
+            <button value="保存" class="bt"></button>
+        </div>
+    </div>
+</div>

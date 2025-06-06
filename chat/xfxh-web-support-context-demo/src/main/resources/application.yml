@@ -1,0 +1,111 @@
+xfxh:
+  # 服务引擎使用 讯飞星火认知大模型V2.0，如果使用 V1.5 需要将 hostUrl 修改为 https://spark-api.xf-yun.com/v1.1/chat
+  hostUrl: https://spark-api.xf-yun.com/v3.5/chat
+  # 发送请求时指定的访问领域，如果是 V1.5版本 设置为 general，如果是 V2版本 设置为 generalv2
+  domain: generalv2
+  # 核采样阈值。用于决定结果随机性，取值越高随机性越强即相同的问题得到的不同答案的可能性越高。取值 [0,1]
+  temperature: 0.5
+  # 模型回答的tokens的最大长度，V1.5取值为[1,4096]，V2.0取值为[1,8192]。
+  maxTokens: 2048
+  # 用于权限验证，从服务接口认证信息中获取
+  appId: 22b646e0
+  # 用于权限验证，从服务接口认证信息中获取
+  apiKey: 74e052f0bf512ee8633d13e3a8303380
+  # 用于权限验证，从服务接口认证信息中获取
+  apiSecret: N2ZjZmJkYjZkNmQ5ODlhYjkwMTUzMzgy
+  # 每个 id 用户能保存的最大交互记录数，需要注意所有累计tokens需控制8192以内
+  maxInteractCount: 3
+  # 内存中能够保存的最大用户数量
+  maxUserCount: 15
+  # 用户记录最大状态为 6，状态超过 userRecordMaxStatus 会从记录空间中移除该用户
+  userRecordMaxStatus: 6
+  # 大模型回复问题的最大响应时长，单位 s
+  maxResponseTime: 40
+  # 允许同时连接大模型的 websocket 数，如果是普通（免费）用户为 2，超过这个数连接响应会报错，具体参考官网。
+  QPS: 2
+  scheduled:
+    # 单位 ms，600000 表示每隔十分钟用户记录状态+1，直到状态超过 userRecordMaxStatus 会从记录空间中移除该用户
+    updateUserStatusFixedDelay: 600000
+
+#  服务  启动端口
+server:
+  port: 8091
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+  datasource:
+    # 初始化时建立的物理连接数。初始化发生在显式调用init方法，或者第一次getConnection时.
+    initial-size: 5
+    # 连接池最大物理连接数量。
+    max-active: 50
+    # 连接池最小物理连接数量。
+    min-idle: 5
+    # 获取连接时最大等待时间，单位为毫秒。
+    # 配置之后，缺省启用公平锁，并发效率会有所下降，若需要可以通过配置useUnfairLock属性为true使用非公平锁。
+    max-wait: 6000
+    # 是否缓存preparedStatement，也就是PSCache。
+    # PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭。
+    pool-prepared-statements: true
+    # 要启用PSCache，其值必须大于0，当大于0时，poolPreparedStatements自动触发修改为true。
+    # 在Druid中，不会存在Oracle下PSCache占用内存过多的问题，可以把这个数值配置大一些，比如说100。
+    max-pool-prepared-statement-per-connection-size: 20
+    # 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。
+    # 如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。
+    validation-query: select 1 from dual
+    url: jdbc:mysql://localhost:3306/chat_data?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    邮箱配置
+  mail:
+    host: smtp.qq.com
+    username: 2519412872@qq.com
+    password: fbrfhcpilcxeecdd
+    defaultEncoding: UTF-8
+    properties:
+      mail.smtp.auth: true
+  mvc:
+    static-path-pattern: /static/**
+
+#mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      # 配置id自增长
+      id-type: auto
+  configuration:
+    # 配置mybatisplus日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 启用驼峰命名映射
+# Sa-Token配置
+sa-token:
+  # token前缀
+  # Token前缀 与 Token值 之间必须有一个空格。
+  # 一旦配置了 Token前缀，则前端提交 Token 时，必须带有前缀，否则会导致框架无法读取 Token。
+  # 由于Cookie中无法存储空格字符，也就意味配置 Token 前缀后，Cookie 鉴权方式将会失效，此时只能将 Token 提交到header里进行传输
+  # token-prefix: Bearer
+  # token 名称 (同时也是cookie名称)
+  token-name: satoken
+  # token 有效期，单位s 默认30天, -1代表永不过期
+  timeout: 2592000
+  # token 临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  activity-timeout: -1
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # token风格
+  token-style: uuid
+  # 是否输出操作日志
+  is-log: true
+
+#图片映射
+photo: http://192.168.252.149:8091/images/
+
+
+
+

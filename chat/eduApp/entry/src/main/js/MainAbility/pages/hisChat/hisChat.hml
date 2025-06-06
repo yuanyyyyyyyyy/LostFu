@@ -1,0 +1,23 @@
+<div class="container">
+    <list class="message-list">
+        <list-item type="message" for="{{(index,item) in messages}}">
+            <div class="message-container">
+                <div style="margin-bottom: 10px;">
+                    <text class="self-message">
+                        {{item.content}}
+                    </text>
+                </div>
+                <div >
+                    <image  class="avatar" src="../../common/root.png"></image>
+                    <text class="other-message ">
+                        {{ item.rootContent }}
+                    </text>
+                </div>
+            </div>
+        </list-item>
+    </list>
+    <div class="input-container">
+        <input class="message-input" type="text" placeholder="输入消息..." value="{{inputMessage}}" onchange="onInputChange"/>
+        <button class="send-button" type="capsule" onclick="sendMessage">发送</button>
+    </div>
+</div>

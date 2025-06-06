@@ -1,0 +1,112 @@
+.pageView{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: white;
+}
+
+.topView{
+    width: 100%;
+    height: 8%;
+    justify-content: center;
+    align-items: center;
+}
+
+.textView{
+    width: 32%;
+    font-size: 23px;
+}
+
+.scrollView{
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    border: 1px solid black;
+
+}
+
+.bottomView{
+    width: 100%;
+    height: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttonView1{
+    width: 98%;
+    height: 70%;
+    flex-direction: column;
+    background-color: #ff079cec;
+    border-radius:15px;
+}
+.buttonView2{
+    width: 100%;
+    height: 30%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.imgView{
+    margin-top: 10%;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+}
+.iconView{
+    margin-top: 15%;
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+}
+.imgView1{
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+.iconView1{
+    width: 60%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.textAreaView{
+    margin-top: 25%;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+
+}
+.textAreaView1{
+    height: 100%;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+.text1View{
+    font-size: 20px;
+    font-weight: 500;
+    align-items: center;
+}
+.diaview{
+    margin-top: 5%;
+    height: 80%;
+    width: 80%;
+    margin-bottom: 10%;
+}
+
+.point{
+    margin-top: 5%;
+    width: 100%;
+    flex-direction: row;
+    height: 25%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
