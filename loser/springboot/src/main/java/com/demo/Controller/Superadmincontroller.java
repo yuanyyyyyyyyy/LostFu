@@ -25,12 +25,15 @@ public class Superadmincontroller {
     @Autowired
     Userservice userservice;
 
+    //查看所有用户
     @GetMapping("/seeWant")
     public response seeWant()
     {
 
         return setRe.setSu(userapplyservice.selectList(new EntityWrapper<userapply>()));//查看申请表
     }
+
+    // 添加管理员
     @GetMapping("/adAdmin")
     public response addAdmin(@RequestParam(value = "id") int id)
     {
