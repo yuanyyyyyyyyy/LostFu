@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Loser - 失物招领网站
 
 ## 项目介绍
@@ -109,15 +108,4 @@ loser/
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 提交 Pull Request
 
-## 版权说明
-本项目采用 MIT 许可证，详情请参见 [LICENSE](../../../Improve/Project/JAVA/loser-master/LICENSE) 文件。
 
-## 联系方式
-- 项目维护者：[维护者姓名]
-- 邮箱：[联系邮箱]
-
-## 致谢
-感谢所有为这个项目做出贡献的开发者们！
-=======
-# LostFu
->>>>>>> 0e5ee9c1ff28201b2af31d9b994e12135bb1c56a
