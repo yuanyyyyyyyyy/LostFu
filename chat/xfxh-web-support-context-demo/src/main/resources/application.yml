@@ -8,11 +8,14 @@ xfxh:
   # 模型回答的tokens的最大长度，V1.5取值为[1,4096]，V2.0取值为[1,8192]。
   maxTokens: 2048
   # 用于权限验证，从服务接口认证信息中获取
-  appId: 22b646e0
+#  appId: 22b646e0
+  appId: dbc1d41d
   # 用于权限验证，从服务接口认证信息中获取
-  apiKey: 74e052f0bf512ee8633d13e3a8303380
+#  apiKey: 74e052f0bf512ee8633d13e3a8303380
+  apiKey: 2c22ecba0d60a525749067da50121d7f
   # 用于权限验证，从服务接口认证信息中获取
-  apiSecret: N2ZjZmJkYjZkNmQ5ODlhYjkwMTUzMzgy
+#  apiSecret: N2ZjZmJkYjZkNmQ5ODlhYjkwMTUzMzgy
+  apiSecret: NGZkZTQ1ZTRmOTY1MmNiN2NlNzc3YmZh
   # 每个 id 用户能保存的最大交互记录数，需要注意所有累计tokens需控制8192以内
   maxInteractCount: 3
   # 内存中能够保存的最大用户数量
@@ -56,15 +59,16 @@ spring:
     # 用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。
     # 如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。
     validation-query: select 1 from dual
-    url: jdbc:mysql://localhost:3306/chat_data?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/loser?useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai
     username: root
-    password: 123456
+    password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
 #    邮箱配置
   mail:
     host: smtp.qq.com
-    username: 2519412872@qq.com
-    password: fbrfhcpilcxeecdd
+#    username: 2519412872@qq.com
+    username: 3509566386@qq.com
+    password: mwquefzefogocjcd
     defaultEncoding: UTF-8
     properties:
       mail.smtp.auth: true
@@ -78,6 +82,7 @@ mybatis-plus:
       # 配置id自增长
       id-type: auto
   configuration:
+    map-underscore-to-camel-case: true
     # 配置mybatisplus日志
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     # 启用驼峰命名映射

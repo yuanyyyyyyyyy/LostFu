@@ -49,6 +49,7 @@ public class Superadmincontroller {
         logservice.insert(new actionlog(1,id, NowTime.Now(),"添加管理员身份"));
         return setRe.setSu(null);//添加管理员
     }
+
     @GetMapping("/deleteAdmin")
     public response deleteAdmin(@RequestParam(value = "id") int id)
     {

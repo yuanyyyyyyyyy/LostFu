@@ -9,6 +9,9 @@ import com.zhulang.xfxh.service.MenuService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+import static com.zhulang.xfxh.util.FileUtil.save;
+
 @Service
 public class MenuServiceImpl  extends ServiceImpl<MenuMapper, Menu> implements MenuService {
     public List<Menu> findMenuByRoleId(Integer roleId)
@@ -18,10 +21,6 @@ public class MenuServiceImpl  extends ServiceImpl<MenuMapper, Menu> implements M
         return list(queryWrapper);
 
     }
-    public void insertMenu(Menu menu)
-    {
-        save(menu);
-    }
     public void deleteMenu(Integer id)
     {
         removeById(id);
@@ -30,4 +29,10 @@ public class MenuServiceImpl  extends ServiceImpl<MenuMapper, Menu> implements M
     {
         updateById(menu);
     }
+
+    // 在 MenuServiceImpl 类中添加以下方法
+    public void insertMenu(Menu menu) {
+        save(menu); // 使用 MyBatis-Plus 提供的 save 方法
+    }
+
 }

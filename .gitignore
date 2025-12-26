@@ -3,21 +3,94 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+build/
+dist/
+out/
+target/
+release/
+deploy/
 
 # Other files and folders
 .settings/
+.gradle/
+.mvn/
+.node_modules/
+.pnpm-store/
+.yarn/
+coverage/
+logs/
+temp/
+tmp/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
 
-# Executables
+# Executables and archives
 *.swf
 *.air
 *.ipa
 *.apk
 *.zip
+*.tar.gz
+*.tar.bz2
+*.7z
+*.rar
+*.exe
+*.dll
+*.so
+*.dylib
 
 # IDE specific files
 *.iml
-success.path
+*.iws
+*.ipr
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/
+.factorypath
+.springBeans
+.sts4-cache
+.cxx
+.hvigor
+.test
+.success.path
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
+# Environment and config files
+.env
+.env.local
+.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.log
+
+# Dependency directories
+node_modules/
+oh_modules/
+vendor/
+
+# Build outputs for various languages
+*.class
+*.jar
+*.war
+*.ear
+*.pyc
+*.pyo
+__pycache__/
+*.o
+*.obj
+*.pdb
+*.lib
+*.dylib
+*.dll
+*.exe
+
+# Project files that should be excluded (override if needed)
+# .project
+# .actionScriptProperties
+# .flexProperties

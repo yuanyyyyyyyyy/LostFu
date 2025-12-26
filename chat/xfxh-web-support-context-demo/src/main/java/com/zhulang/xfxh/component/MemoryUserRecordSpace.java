@@ -7,6 +7,7 @@ import com.zhulang.xfxh.dto.RecordsArray;
 import com.zhulang.xfxh.serviceImpl.HistoryServiceImpl;
 import org.springframework.stereotype.Component;
 
+
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;

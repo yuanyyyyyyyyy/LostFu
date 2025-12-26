@@ -39,7 +39,15 @@ public class SaTokenConfigure implements WebMvcConfigurer {
         // 注册路由拦截器，自定义认证规则
         registry.addInterceptor(new SaInterceptor(handler -> {
                     // 登录认证 -- 拦截所有路由，并排除/user/doLogin 用于开放登录
-                    SaRouter.match("/**", "/user/login", r -> StpUtil.checkLogin());
+//                    SaRouter.match("/**", "/user/login", r -> StpUtil.checkLogin());
+                    // 登录认证 -- 拦截所有路由，并排除/user/login 用于开放登录
+                    SaRouter.match("/**")  // 匹配所有路径
+                            .notMatch("/user/login")     // 排除登录接口
+                            .notMatch("/user/verifyCode") // 排除验证码接口
+                            .notMatch("/user/sendCode")   // 排除发送验证码接口
+                            .notMatch("/user/register")   // 排除注册接口
+                            .notMatch("/images/**")       // 排除图片资源
+                            .check(r -> StpUtil.checkLogin()); // 其他所有接口都需要登录
 //                    // 角色认证 -- 拦截以 admin 开头的路由，必须具备 admin 角色或者 super-admin 角色才可以通过认证
 //                    SaRouter.match("/admin/**", r -> StpUtil.checkRoleOr("admin", "super-admin"));
 //                    // 权限认证 -- 不同模块认证不同权限

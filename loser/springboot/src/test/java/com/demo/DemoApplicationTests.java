@@ -18,4 +18,7 @@ import java.util.List;
 @SpringBootTest
 class DemoApplicationTests {
 
+    @Test
+    void contextLoads() {
+    }
 }

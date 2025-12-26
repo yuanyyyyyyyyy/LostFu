@@ -10,6 +10,8 @@ import log from '../views/super/log.vue'
 import wantAd from '../views/super/wantAd.vue'
 import adminInfo from '../views/super/adminInfo.vue'
 import chat from '@/views/chat/chat.vue'
+import Pay from '../views/Pay.vue'
+import PaySuccess from '../views/PaySuccess.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -62,6 +64,10 @@ const routes = [
         component: wantAd,
       }
       ,
+        { path: '/pay', name: 'Pay', component: Pay },
+        { path: '/pay/success', name: 'PaySuccess', component: PaySuccess }
+        ,
+
       {
         path: '/adminInfo',
         name: 'adminInfo',
